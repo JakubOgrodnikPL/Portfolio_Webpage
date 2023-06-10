@@ -1,0 +1,1171 @@
+/**********ALL**********/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/**********GLOBAL CLASSES**********/
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.allHeaders1 {
+    font-family: "Saira Condensed", sans-serif;
+    font-weight: bold;
+    font-size: 5.5vh;
+    color: white;
+    text-transform: uppercase;
+}
+
+.allHeaders2 {
+    font-family: "Saira Condensed", sans-serif;
+    font-weight: 400;
+    font-size: 4.5vh;
+    color: white;
+    text-transform: uppercase;
+}
+
+/**********(0) HTML**********/
+html {
+    scroll-behavior: smooth;
+}
+
+/**********(1) BODY**********/
+/**********(2) NAVIGATION MENU**********/
+nav {
+    height: 80px;
+    background: rgba(0, 0, 0, .8);
+    border-top: 1px solid rgba(255, 255, 255, .2);
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    font-family: 'Saira', sans-serif;
+    z-index: 1;
+    overflow: hidden;
+}
+
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 50px;
+    font-family: "Saira Condensed", sans-serif;
+    font-weight: 700;
+}
+
+nav ul {
+    margin-right: 20px;
+    float: right;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    display: block;
+    color: #fff;
+    padding: 0px 13px;
+    border-radius: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 80px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background: orange;
+}
+
+nav ul li a.active {
+    background: orange;
+}
+
+.checkbutton {
+    font-size: 30px;
+    color: white;
+    float: left;
+    line-height: 80px;
+    margin-left: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+/**********(2.5) NAVIGATION MENU MEDIA**********/
+@media (max-width:952px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 20px;
+    }
+
+    nav ul li {
+        font-size: 16px;
+    }
+}
+
+@media (max-width:858px) {
+    .checkbutton {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, .8);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        /* list-style: */
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    nav ul li a {
+        font-size: 4vh;
+        line-height: 10vh;
+    }
+
+    a:hover,
+    a.active {
+        background: none;
+        color: white;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
+
+/**********(2) WELCOME SECTION**********/
+header {
+    position: relative;
+    height: 80vh;
+    background: #29a6dc;
+    background-image: url(../media/cv2_min.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    background-size: 40vh;
+}
+
+header div.welcome {
+    top: 10%;
+    bottom: 10%;
+    left: 10px;
+    right: 10px;
+    text-align: center;
+    font-family: "Saira Condensed", sans-serif;
+    font-weight: bold;
+    font-size: 7vh;
+    color: white;
+    text-transform: uppercase;
+    height: 50%;
+    position: absolute;
+}
+
+@media(orientation:landscape) {
+    header {
+        background-position: bottom right;
+        background-size: 60vh;
+    }
+
+    header div.welcome {
+        left: 0;
+        right: 40%;
+        top: 30%;
+        bottom: 30%;
+    }
+}
+
+@media(orientation: landscape) and (min-aspect-ratio: 9/7) {
+    header div.welcome {
+        left: 0;
+        right: 30%;
+        top: 20%;
+        bottom: 20%;
+        font-size: 10vh;
+    }
+
+    .allHeaders1 {
+        font-size: 9vh;
+    }
+
+    .allHeaders2 {
+        font-size: 8vh;
+    }
+}
+
+@media (max-aspect-ratio: 5/11) {
+    .allHeaders1 {
+        font-size: 4.5vh;
+    }
+
+    .allHeaders2 {
+        font-size: 3.5vh;
+    }
+}
+
+/******************************************** CV **********************************************/
+
+.containerPdfIcon {
+    display:inline-block;
+    position: relative;
+    top: 20px;
+    left: 50%;
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    padding-bottom: 60px;
+}
+
+/**********(2) SKILLS**********/
+section.skills {
+    font-size: 10vh;
+    height: auto;
+}
+
+section div.skillsheader {
+    color: black;
+    font-family: "Saira Condensed";
+    font-size: 50%;
+    text-align: center;
+    left: 0;
+    right: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-top: 2vh;
+}
+
+section div.skillsicons {
+    margin-top: 4vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    height: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+section div.skillsicons img {
+    height: 15vh;
+}
+
+section div.skillsdescription {
+    color: black;
+    font-family: "Saira Condensed";
+    font-size: 40%;
+    text-align: center;
+    left: 0;
+    right: 0;
+    line-height: 200%;
+    padding-bottom: 2vh;
+}
+
+/**********(2) PORTFOLIO**********/
+.portfolio {
+    background-color: black;
+    padding-bottom: 5vh;
+    width: 100%;
+}
+
+.portfolio .project {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    text-align: center;
+    position: relative;
+    height: auto;
+    margin-bottom: 5vh;
+}
+
+.portfolio h1 {
+    font-size: 5vh;
+    font-family: 'Saira Condensed', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    font-weight: 700;
+}
+
+.web {
+    height: 40vh;
+    width: 100%;
+    /*    float: left;*/
+}
+
+.web img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.slider {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.slider figure {
+    position: relative;
+    width: 400%;
+    margin: 0;
+    left: 0;
+    animation: 10s slider infinite;
+}
+
+.slider figure img {
+    float: left;
+    width: 25%;
+}
+
+@keyframes slider {
+    0% {
+        left: 0;
+    }
+
+    30% {
+        left: -100%;
+    }
+
+    60% {
+        left: -200%
+    }
+
+    90% {
+        left: -300%
+    }
+
+    100% {
+        left: -300%
+    }
+}
+
+/*
+.web img.cert {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    object-position: center;
+    background: black;
+}
+*/
+
+.web video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    background: black;
+
+}
+
+.web video.reel {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    background: black;
+
+}
+
+.portfolio .project .about {
+    color: white;
+    font-family: 'Saira', sans-serif;
+    font-weight: normal;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    height: 40vh;
+}
+
+.portfolio .project .about h2 {
+    font-size: 4vh;
+    border-bottom: 2px solid white;
+    padding-left: 10px;
+}
+
+.portfolio .about p {
+    font-size: 2.5vh;
+    padding-left: 10px;
+}
+
+.portfolio .project:nth-of-type(odd) {
+    background-color: orange;
+}
+
+.portfolio .project:nth-of-type(even) {
+    background-color: deepskyblue;
+}
+
+/**********************************CAROUSEL*******************************************/
+
+
+
+
+
+
+
+
+
+
+
+/******************************** UNREAL PROJECTS  ********************************/
+
+.goToUnreal {
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    top: 4
+    0px;
+
+    left: 50%;
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    background-color: #000000;
+    border: 4px solid rgb(70, 141, 207);
+    box-shadow: 0 0 .8em rgb(70, 141, 207);
+    padding: 30px 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 30px;
+    transition: 0.5s;
+    font-family: "Saira Condensed", sans-serif;
+    font-weight: bold;
+    text-shadow: 0 0 .60em #29a6dc;
+    color:rgb(70, 141, 207);
+    animation: blink 2s linear infinite;
+    margin-bottom: 60px;
+  }
+
+.goToUnreal::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height:100%;
+    background: rgb(70, 141, 207);
+    transform: perspective(0.6em)rotateX(10deg)scale(1.3, 0.4);
+    filter: blur(0.9em);
+    opacity: 0.6;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0.1;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+
+    80% {
+        opacity: 0.1;
+    }
+}
+
+  .goToUnreal::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgb(70, 141, 207);
+    box-shadow: 0 0 2em rgb(70, 141, 207);
+    z-index: -1;
+    opacity: 0;
+  }
+  .goToUnreal:hover::after{
+    opacity: 1;
+  }
+  .goToUnreal:hover, .goToUnreal:focus{
+    color: white;
+  }
+
+/******************************** DEKTOP TIP ********************************/
+
+.desktopTip {
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    background-color: black;
+    display: flexbox;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: "Saira Condensed", sans-serif;
+    font-weight: normal;
+    font-size: 30px;
+    color: white;
+    text-transform: none;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 0vh;
+    padding-bottom: 0vh;
+}
+
+.goToDesktop {
+    position: relative;
+    top: 20px;
+    left: 50%;
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    background-color: #75a3ce;
+    border: 4px solid white;
+    padding: 30px 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 30px;
+    transition: 0.5s;
+    font-family: "Saira Condensed", sans-serif;
+    font-weight: bold;
+  }
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: .5;
+    }
+}
+
+  .goToDesktop a {
+    all: unset;
+    animation: blink 2s linear infinite;
+  }
+
+  .goToDesktop:hover {
+    background-color: orange;
+    color: white;
+    border-color: white;
+  }
+
+/******************************** PORTFOLIO MEDIA ********************************/
+
+@media (orientation: landscape) {
+    .portfolio .project .about {
+
+        float: left;
+        width: 50%;
+    }
+
+    .portfolio .project .web {
+
+        float: left;
+        width: 50%;
+
+    }
+
+    .portfolio .project {
+        height: 40vh;
+
+    }
+
+    .portfolio .project .about h2 {
+        font-size: 4vh;
+    }
+
+    .portfolio .about p {
+        font-size: 2.8vh;
+    }
+
+}
+
+/**********(2) SLOGAN**********/
+.slogan {
+    text-align: center;
+    background-image: url(../media/motto.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    background-attachment: fixed;
+}
+
+.slogan h1 {
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 5vh;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    font-weight: 700;
+}
+
+.slogan p {
+    font-family: 'Saira', sans-serif;
+    padding: 20px 0px;
+    font-size: 4vh;
+}
+
+.slogan p.author {
+    font-size: 3vh;
+    padding: 10px 0px;
+}
+
+.slogan .bg {
+    padding: 30px 10px;
+    background-color: rgba(0, 63, 114, .5);
+}
+
+/**********(2) PASSIONS**********/
+.passions .item {
+    position: relative;
+    height: 25vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.passions .item:nth-of-type(1) {
+    background-image: url(../media/passion1.jpg);
+}
+
+.passions .item:nth-of-type(2) {
+    background-image: url(../media/passion2.jpg);
+}
+
+.passions .item:nth-of-type(3) {
+    background-image: url(../media/passion3.jpg);
+}
+
+.passions .item:nth-of-type(4) {
+    background-image: url(../media/passion4.jpg);
+}
+
+.passions .item:nth-of-type(5) {
+    background-image: url(../media/passion5.jpg);
+}
+
+.passions .item:nth-of-type(6) {
+    background-image: url(../media/passion6.jpg);
+}
+
+.passions .item .butt {
+    border: solid white 2px;
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    height: 30%;
+    width: 40%;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
+
+
+.passions .item a {
+    display: flex;
+    top: 50%;
+    font-family: 'Saira', sans-serif;
+    color: white;
+    text-align: center;
+    text-shadow: 0 0 4px black;
+    font-size: 16px;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.passions .item p {
+    font-family: 'Saira', sans-serif;
+    color: white;
+    text-align: center;
+    text-shadow: 0 0 4px black;
+    background-color: rgba(0, 0, 0, .5);
+    font-size: 20px;
+    padding: 5px 0;
+
+}
+
+.passions h1 {
+    color: black;
+    text-align: center;
+    font-size: 5vh;
+    font-weight: 700;
+    padding: 20px 0;
+}
+
+@media (orientation:landscape) {
+    .passions .item {
+        float: left;
+        width: 50%;
+        height: 40vh;
+        font-family: 'Saira Condensed', sans-serif;
+    }
+
+    .passions .item .butt {
+        border: solid white 2px;
+        background-color: rgba(0, 0, 0, .5);
+        position: absolute;
+        height: 25%;
+        width: 40%;
+        top: 80%;
+        left: 78%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+    }
+
+    .passions .item .butt a {
+        font-size: 14px;
+    }
+
+    .passions .item p {
+        padding: 0;
+        line-height: 40vh;
+    }
+}
+
+@media (orientation:landscape) and (min-width: 953px) {
+    .passions .item .butt a {
+        font-size: 16px;
+    }
+
+    .passions .item p {
+        font-size: 26px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .passions .item:hover {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .passions .item {
+        background-size: 115%;
+        transition: 1s;
+    }
+
+    .passions .item:hover {
+        background-size: 140%;
+    }
+}
+
+.passions .item a:hover {
+    background-color: white;
+    color: black;
+}
+
+/**********(2) CONTACT**********/
+
+.contact {
+    background-color: black;
+    padding: 20px 10px;
+}
+
+.contact h1 {
+    font-family: 'Saira Condensed', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 5vh;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.contact .wrap {
+    padding-top: 20px;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.contact input,
+.contact button,
+.contact textarea {
+    width: 100%;
+    margin-bottom: 25px;
+    font-family: 'Saira', sans-serif;
+    font-size: 12px;
+    padding: 5px;
+}
+
+
+.contact input {
+    font-size: 12px;
+    height: 36px;
+    padding: 5px;
+}
+
+.contact textarea {
+    height: 120px;
+}
+
+.contact button {
+    font-size: 14px;
+    line-height: 40px;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+
+.contact .socials {
+    padding-top: 30px;
+    font-size: 0;
+}
+
+.contact .social {
+    padding: 10px 0;
+    color: white;
+    font-family: 'Saira Condensed', sans-serif;
+
+}
+
+.contact .social img {
+    float: left;
+}
+
+.contact .social span {
+    line-height: 72px;
+    padding-left: 20px;
+    float: left;
+    font-size: 16px;
+}
+
+@media (min-width: 570px) {
+    .contact .social {
+        display: inline-block;
+        width: 50%;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .contact form,
+    .contact .socials {
+        float: left;
+        width: 50%;
+        padding-top: 0;
+    }
+
+    .contact .social {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+        padding: 5 20px;
+    }
+
+    .contact .social span {
+        font-size: 16px;
+    }
+
+    .contact input,
+    .contact button,
+    .contact textarea {
+        margin-bottom: 35px;
+
+    }
+
+    .contact input {
+        font-size: 24px;
+        height: 46px;
+        padding: 5px;
+    }
+
+    .contact textarea {
+        height: 180px;
+        font-size: 24px;
+    }
+
+    .contact button {
+        font-size: 20px;
+        line-height: 50px;
+        transition: .5s;
+        cursor: pointer;
+    }
+
+    .contact button:hover {
+        color: black;
+        background-color: white;
+
+    }
+
+}
+
+/******************** PROJECT PAGE***********************/
+
+/******************** PROJECT PAGE MENU***********************/
+/* #sticky-menu {
+    width: 20%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;s
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #menu-center {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+   */
+.goToMain {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #75a3ce;
+    border: 4px solid black;
+    padding: 30px 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: 1s;
+    font-family: "Saira Condensed", sans-serif;
+    font-weight: bold;
+  }
+
+  .goToMain a {
+    /* text-decoration: none; */
+    all: unset;
+  }
+
+  .goToMain:hover {
+    background-color: orange;
+    color: white;
+    border-color: white;
+  }
+
+/******************** PROJECT PAGE HEADER***********************/
+
+.desktopHeader {
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    background-color: black;
+    display: flexbox;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: "Saira Condensed", sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+    color: white;
+    text-transform: uppercase;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+.desktopHeader i {
+    font-size: 50px;
+}
+
+.desktopHeader p {
+    font-size: 30px;
+    font-weight: normal;
+    text-transform: none;
+}
+
+
+
+.desktopWelcome {
+    width: 100%;
+    height: 20vh;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(315deg, #c2118d 0%, #ff503c 74%);
+    display: flexbox;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: "Saira Condensed", sans-serif;
+    font-weight: bold;
+    font-size: 80px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.desktopWelcome p {
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.desktopHeader video {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/******************* WEATHER APP ************************/
+.WeatherApp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(315deg, #c2118d 0%, #ff503c 74%);
+    font-size: 20px;
+}
+
+.h1App {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+}
+
+input {
+    font-size: 16px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    background: none;
+    border: none;
+    color: #fff;
+    border-bottom: 2px solid #ddd;
+}
+
+input::placeholder {
+    color: #ddd;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.buttonWeather {
+    padding: 10px;
+    margin-left: 20px;
+    color: #fff;
+    font-weight: bold;
+    background: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color .3s, color .3s;
+}
+
+.buttonWeather:hover {
+    color: #333;
+    background-color: #ddd;
+}
+
+.api {
+    width: 800px;
+    padding: 20px 40px;
+    background-color: rgba(0, 0, 0, .8);
+    border: 2px solid white;
+    border-radius: 25px;
+}
+
+.top {
+    height: 260px;
+}
+
+.bottom {
+    height: 140px;
+}
+
+.main-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+}
+
+.city-name {
+    font-size: 40px;
+}
+
+.headings,
+.weather-info {
+    display: flex;
+    align-items: center;
+}
+
+.headings p,
+.weather-info p {
+    width: 33.3%;
+    text-align: center;
+}
+
+.headings {
+    height: 35%;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.weather-info {
+    height: 65%;
+    font-size: 26px;
+}
+
+.photo {
+    width: 140px;
+    height: 140px;
+	object-fit: contain;
+}
+
+.warning {
+    margin-top: 10px;
+    font-size: 14px;
+    color: tomato;
+}
+/******************* SNAKE GAME ************************/
+
+#gameContainer {
+    text-align: center;
+}
+
+#gameBoard {
+    border: 3px solid;
+}
+
+#scoreText {
+    font-family: 'Saira', sans-serif;
+    font-size: 80px;
+    text-align: center;
+}
+
+#resetButton {
+    font-family: 'Saira', sans-serif;
+    font-size: 20px;
+    width: 100px;
+    height: 50px;
+    border: 4px solid;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/**********(2) FOOTER**********/
+footer {
+    background-color: #29a6dc;
+    color: white;
+    font-family: 'Saira', sans-serif;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+}

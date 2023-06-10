@@ -1,0 +1,253 @@
+/**********ALL**********/
+body {
+	margin: 0;
+	padding: 0;
+	display: flexbox;
+	justify-content: center;
+	/* align-items: center; */
+	/* min-height: 200vh; */
+	background: black;
+	font-family: "Saira", sans-serif;
+	text-align: center;
+	color: white;
+}
+
+.menuUnreal {
+	display: flexbox;
+	align-items: center;
+	padding: 20px 0;
+	height: 80px;
+}
+
+.menuUnreal a {
+	position: relative;
+	display: inline-block;
+	padding: 15px 30px;
+	color: #2196f3;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	text-decoration: none;
+	font-size: 20px;
+	overflow: hidden;
+	transition: 0.2;
+}
+
+.menuUnreal a:hover {
+	color: #255784;
+	background: #2196f3;
+	box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+	transition-delay: 0.5s;
+}
+
+.menuUnreal a span {
+	position: absolute;
+	display: block;
+}
+
+.menuUnreal a span:nth-child(1) {
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg, transparent, #2196f3);
+}
+
+.menuUnreal a:hover span:nth-child(1) {
+	left: 100%;
+	transition: 0.5s;
+}
+
+.menuUnreal a span:nth-child(3) {
+	bottom: 0;
+	right: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(270deg, transparent, #2196f3);
+}
+
+.menuUnreal a:hover span:nth-child(3) {
+	right: 100%;
+	transition: 0.5s;
+	transition-delay: 0.25s;
+}
+
+.menuUnreal a span:nth-child(2) {
+	top: -100%;
+	right: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(180deg, transparent, #2196f3);
+}
+
+.menuUnreal a:hover span:nth-child(2) {
+	top: 100%;
+	transition: 0.5s;
+	transition-delay: 0.125s;
+}
+
+.menuUnreal a span:nth-child(4) {
+	bottom: -100%;
+	left: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(360deg, transparent, #2196f3);
+}
+
+.menuUnreal a:hover span:nth-child(4) {
+	bottom: 100%;
+	transition: 0.5;
+	transition-delay: 0.375s;
+}
+
+/********************** UNREAL LOGO *********************/
+
+.unrealLogo {
+	width: 50%;
+	margin-top: 20px;
+	margin-bottom: 60px;
+}
+
+@media (min-width: 952px) {
+	.unrealLogo {
+		width: 20%;
+	}
+}
+
+/********************** PROJECTS DROPDOWN  *********************/
+
+.wrapperUnreal {
+	display: flexbox;
+	/* padding-top: 50px; */
+	/* justify-content: center; */
+	/* align-items: center; */
+	/* text-align: center; */
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+    padding-bottom: 300px;
+}
+
+@media (max-width: 952px) {
+	.wrapperUnreal {
+		width: 90%;
+	}
+}
+
+.collapsible {
+	overflow: hidden;
+	font-weight: 500;
+	border: white 4px;
+}
+
+.collapsible input {
+	display: none;
+}
+
+.collapsible label {
+	text-transform: uppercase;
+	position: relative;
+	font-size: 24px;
+	font-weight: 600;
+	background: black;
+	border-style: solid;
+	border-color: #2196f3;
+	box-shadow: 0 0 20px #2196f3;
+	/* box-shadow: 0 5px 11px 0 rgba(0,0,0 .1), 0 4px 11px 0 rgba(0,0,0 .0); */
+	color: white;
+	display: block;
+	margin-bottom: 10px;
+	cursor: pointer;
+	padding: 15px 0;
+	border-radius: 4px;
+	z-index: 1;
+}
+
+@media (max-width: 952px) {
+	.collapsible label {
+		font-size: 14px;
+	}
+}
+
+.collapsible label:after {
+	content: "";
+	position: absolute;
+
+	background: url(/media/a-right.png) no-repeat 0 0 ;
+    right: 15px;
+	top: 22px;
+	width: 20px;
+	height: 20px;
+    background-size: cover;
+    /* background: border-box red; */
+	transition: all 0.3s ease;
+}
+
+@media (max-width: 952px) {
+	.collapsible label:after {
+		background: none;
+	}
+}
+
+.collapsible input:checked + label:after {
+	transform: rotate(90deg);
+}
+
+.collapsible-content {
+	font-size: 20px;
+	max-height: 1px;
+	overflow: hidden;
+	border-radius: 4px;
+	line-height: 1.4;
+	position: relative;
+	top: -100%;
+	opacity: 1;
+	transition: all 0.3s ease;
+	margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+.collapsible input:checked ~ .collapsible-content {
+	max-height: 800px;
+	padding-bottom: 25px;
+	background: #2195f38e;
+	/* box-shadow: 0 5px 11px 0 rgba(0,0,0 .1), 0 4px 11px 0 rgba(0,0,0 .0); */
+	top: 0;
+}
+
+.collapsible-content p {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.videoUnreal {
+    padding-top: 10px;
+	width:100%;
+}
+
+/*************************** GO TO TOP *****************************/
+
+.goToTop a {
+	color: #1edb17;
+}
+
+.goToTop a:hover {
+	color: #1d9719;
+	background: #1edb17;
+	box-shadow: 0 0 10px #1edb17, 0 0 40px #1edb17, 0 0 80px #1edb17;
+	transition-delay: 0.5s;
+}
+.goToTop a span:nth-child(1) {
+	background: linear-gradient(90deg, transparent, #1edb17);
+}
+
+.goToTop a span:nth-child(3) {
+	background: linear-gradient(270deg, transparent, #1edb17);
+}
+
+.goToTop a span:nth-child(2) {
+	background: linear-gradient(180deg, transparent, #1edb17);
+}
+
+.goToTop a span:nth-child(4) {
+	background: linear-gradient(360deg, transparent, #1edb17);
+}
