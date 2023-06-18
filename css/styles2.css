@@ -11,6 +11,14 @@ body {
 	text-align: center;
 	color: white;
 }
+/**********GLOBAL CLASSES**********/
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/**********LUKROWANE GUZICZKI**********/
 
 .menuUnreal {
 	display: flexbox;
@@ -169,7 +177,7 @@ nav ul li a.active {
 }
 
 /**********(2.5) NAVIGATION MENU MEDIA**********/
-@media (max-width:1260px) {
+@media (max-width:1240px) {
     label.logo {
         font-size: 30px;
         padding-left: 20px;
@@ -187,13 +195,14 @@ nav ul li a.active {
 
     nav ul {
         position: fixed;
-        width: 80%;
+        width: 100%;
         height: 100vh;
         background: rgba(0, 0, 0, .8);
         top: 80px;
         left: -100%;
         text-align: center;
         transition: all .5s;
+		padding: 0px;
         /* list-style: */
     }
 
@@ -223,13 +232,15 @@ nav ul li a.active {
     display: flex;
     position: relative;
     height: 60vh;
-    background-image: url(/media/bgNewHeader.jpg);
+    background: rgba(0, 0, 0, .65) url(/media/bgNewHeader.jpg);
+	background-blend-mode: darken;
     background-size: cover;
     background-repeat: no-repeat;
     background-position:center;
     background-attachment: fixed;
     align-items: center;
     justify-content: center;
+	background-blend-mode:color;
 }
 
 .wrapAbout{
@@ -246,13 +257,28 @@ nav ul li a.active {
     text-align: center;
     align-items: center;
     flex-direction: column;
-
-
 }
-.wrapAbout div img{
-    height: 80%;
+
+.linkAbout{
+	height: 70%;
+}
+.linkResume{
+	height: 70%;
+}
+
+.linkAbout img{
+	transition: 0.5s ease;
+}
+.linkResume img{
+	transition: 0.5s ease;
+}
+
+
+.wrapAbout div a img{
+    height: 100%;
     padding-right: 20px;
     padding-left: 20px;
+	border-radius: 50%;
 }
 
 .wrapAbout div p{
@@ -268,9 +294,333 @@ nav ul li a.active {
 }
 
 .vl {
-  border-left: 3px solid white;
-    border-right: 3px solid white;
+	border: 3px solid #10a5af;
+	box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+    border-radius: 7px;
 }
+
+.about a img:hover{
+	border-radius:20%;
+	-webkit-transform: scale(0.8);
+	-ms-transform: scale(0.8);
+	transform: scale(0.8);
+	transition: 0.5s ease;
+}
+.resume a img:hover{
+	border-radius:20%;
+	-webkit-transform: scale(0.8);
+	-ms-transform: scale(0.8);
+	transform: scale(0.8);
+	transition: 0.5s ease;
+}
+
+/***************************************************************BAR*****************************************************************/
+
+.bar{
+    font-size: 5.5vh;
+    color: white;
+    text-transform: uppercase;
+	padding: 40px 0;
+}
+
+/*****************************************************************PORFOLIO******************************************************************/
+
+.portfolio .item {
+    position: relative;
+    height: 25vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.portfolio .item:nth-of-type(1) {
+    background-image: url(../media/mathematics.jpg);
+}
+
+.portfolio .item:nth-of-type(2) {
+    background-image: url(../media/poetry.jpg);
+}
+
+.portfolio .item:nth-of-type(3) {
+    background-image: url(../media/digitalgamestudies.jpg);
+}
+
+.portfolio .item:nth-of-type(4) {
+    background-image: url(../media/playinggames.jpg);
+}
+
+.portfolio .item:nth-of-type(5) {
+    background-image: url(../media/sports.jpg);
+}
+
+.portfolio .item:nth-of-type(6) {
+    background-image: url(../media/podcast.jpg);
+}
+
+.portfolio .item .butt {
+    border: solid white 2px;
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    height: 30%;
+    width: 40%;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+	margin: 0;
+	padding: 0;
+
+}
+
+.portfolio .item a {
+    display: flex;
+    top: 50%;
+    font-family: 'Saira', sans-serif;
+    color: white;
+    text-align: center;
+    text-shadow: 0 0 4px black;
+    font-size: 16px;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio .item p {
+    font-family: 'Saira', sans-serif;
+    color: white;
+    text-align: center;
+    text-shadow: 0 0 4px black;
+    background-color: rgba(0, 0, 0, .5);
+    font-size: 20px;
+    padding: 5px 0;
+}
+
+.portfolio h1 {
+    color: black;
+    text-align: center;
+    font-size: 5vh;
+    font-weight: 700;
+    padding: 20px 0;
+}
+
+@media (orientation:landscape) {
+    .portfolio .item {
+        float: left;
+        width: 50%;
+        height: 40vh;
+        font-family: 'Saira Condensed', sans-serif;
+    }
+
+    .portfolio .item .butt {
+        border: solid white 2px;
+        background-color: rgba(0, 0, 0, .5);
+        position: absolute;
+        height: 25%;
+        width: 40%;
+        top: 80%;
+        left: 78%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+    }
+
+    .portfolio .item .butt a {
+        font-size: 14px;
+    }
+
+    .portfolio .item p {
+		margin: 0;
+        line-height: 40vh;
+    }
+}
+
+@media (orientation:landscape) and (min-width: 953px) {
+    .portfolio .item .butt a {
+        font-size: 16px;
+    }
+
+    .portfolio .item p {
+        font-size: 26px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .portfolio .item:hover {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .portfolio .item {
+        background-size: 115%;
+        transition: 1s;
+    }
+
+    .portfolio .item:hover {
+        background-size: 140%;
+    }
+}
+
+.portfolio .item a:hover {
+    background-color: white;
+    color: black;
+}
+
+
+/*****************************************************(2) PASSIONS*******************************************************/
+.passions .item {
+    position: relative;
+    height: 25vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.passions .item:nth-of-type(1) {
+    background-image: url(../media/mathematics.jpg);
+}
+
+.passions .item:nth-of-type(2) {
+    background-image: url(../media/poetry.jpg);
+}
+
+.passions .item:nth-of-type(3) {
+    background-image: url(../media/digitalgamestudies.jpg);
+}
+
+.passions .item:nth-of-type(4) {
+    background-image: url(../media/playinggames.jpg);
+}
+
+.passions .item:nth-of-type(5) {
+    background-image: url(../media/sports.jpg);
+}
+
+.passions .item:nth-of-type(6) {
+    background-image: url(../media/podcast.jpg);
+}
+
+.passions .item .butt {
+    border: solid white 2px;
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    height: 30%;
+    width: 40%;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+	margin: 0;
+	padding: 0;
+
+}
+
+.passions .item a {
+    display: flex;
+    top: 50%;
+    font-family: 'Saira', sans-serif;
+    color: white;
+    text-align: center;
+    text-shadow: 0 0 4px black;
+    font-size: 16px;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.passions .item p {
+    font-family: 'Saira', sans-serif;
+    color: white;
+    text-align: center;
+    text-shadow: 0 0 4px black;
+    background-color: rgba(0, 0, 0, .5);
+    font-size: 20px;
+    padding: 5px 0;
+}
+
+.passions h1 {
+    color: black;
+    text-align: center;
+    font-size: 5vh;
+    font-weight: 700;
+    padding: 20px 0;
+}
+
+@media (orientation:landscape) {
+    .passions .item {
+        float: left;
+        width: 50%;
+        height: 40vh;
+        font-family: 'Saira Condensed', sans-serif;
+    }
+
+    .passions .item .butt {
+        border: solid white 2px;
+        background-color: rgba(0, 0, 0, .5);
+        position: absolute;
+        height: 25%;
+        width: 40%;
+        top: 80%;
+        left: 78%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+    }
+
+    .passions .item .butt a {
+        font-size: 14px;
+    }
+
+    .passions .item p {
+		margin: 0;
+        line-height: 40vh;
+    }
+}
+
+@media (orientation:landscape) and (min-width: 953px) {
+    .passions .item .butt a {
+        font-size: 16px;
+    }
+
+    .passions .item p {
+        font-size: 26px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .passions .item:hover {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .passions .item {
+        background-size: 115%;
+        transition: 1s;
+    }
+
+    .passions .item:hover {
+        background-size: 140%;
+    }
+}
+
+.passions .item a:hover {
+    background-color: white;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /********************** UNREAL LOGO *********************/
 
