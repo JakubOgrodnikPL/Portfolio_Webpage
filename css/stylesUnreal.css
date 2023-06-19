@@ -99,6 +99,61 @@ body {
 	transition-delay: 0.375s;
 }
 
+/********************** PHOTO *********************/
+.metwo{
+	height: 20vh;
+}
+
+/********************** About me p *********************/
+
+.aboutmep{
+	margin: 0 20%;
+	font-size: 20px;
+}
+
+/************************************(2) SKILLS*********************************************/
+section.skills {
+	margin: 0 20%;
+    height: auto;
+}
+
+section div.skillsheader {
+    color: black;
+    font-family: "Saira Condensed";
+    font-size: 50%;
+    text-align: center;
+    left: 0;
+    right: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-top: 2vh;
+}
+
+section div.skillsicons {
+
+	margin: 0% 20%;
+    height: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+section div.skillsicons img {
+    height: 80px;
+}
+
+section div.skillsdescription {
+    color: black;
+    font-family: "Saira Condensed";
+    font-size: 40%;
+    text-align: center;
+    left: 0;
+    right: 0;
+    line-height: 200%;
+    padding-bottom: 2vh;
+}
+
 /********************** UNREAL LOGO *********************/
 
 .unrealLogo {
