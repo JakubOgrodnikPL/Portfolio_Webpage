@@ -774,3 +774,13 @@ nav ul li a.active {
 .goToTop a span:nth-child(4) {
 	background: linear-gradient(360deg, transparent, #1edb17);
 }
+
+/**********(2) FOOTER**********/
+footer {
+    background-color: #000000;
+    color: white;
+    font-family: 'Saira', sans-serif;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+}
