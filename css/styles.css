@@ -1152,7 +1152,7 @@ input::placeholder {
 }
 
 .main-info {
-    display: flex;
+    display: none;
     justify-content: space-around;
     align-items: center;
     height: 200px;

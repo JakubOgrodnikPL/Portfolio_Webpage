@@ -306,3 +306,13 @@ section div.skillsdescription {
 .goToTop a span:nth-child(4) {
 	background: linear-gradient(360deg, transparent, #1edb17);
 }
+
+
+/***************************************************************BAR*****************************************************************/
+
+.bar{
+    font-size: 5.5vh;
+    color: white;
+    text-transform: uppercase;
+	padding: 40px 0;
+}
