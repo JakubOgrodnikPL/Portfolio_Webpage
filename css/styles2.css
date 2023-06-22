@@ -232,7 +232,7 @@ nav ul li a.active {
     display: flex;
     position: relative;
     height: 60vh;
-    background: rgba(0, 0, 0, .65) url(/media/bgNewHeader.jpg);
+    background: rgba(0, 0, 0, .6) url(/media/bgNewHeader3.jpg);
 	background-blend-mode: darken;
     background-size: cover;
     background-repeat: no-repeat;
@@ -240,7 +240,7 @@ nav ul li a.active {
     background-attachment: fixed;
     align-items: center;
     justify-content: center;
-	background-blend-mode:color;
+	/* background-blend-mode:color; */
 }
 
 .wrapAbout{
@@ -334,7 +334,7 @@ nav ul li a.active {
 }
 
 .portfolio .item:nth-of-type(1) {
-    background-image: url(../media/mathematics.jpg);
+    background-image: url(../media/portfolio1.jpg);
 }
 
 .portfolio .item:nth-of-type(2) {
