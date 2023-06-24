@@ -1152,6 +1152,13 @@ input::placeholder {
 }
 
 .main-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+}
+
+.main-info2 {
     display: none;
     justify-content: space-around;
     align-items: center;
@@ -1226,7 +1233,7 @@ input::placeholder {
 
 /**********(2) FOOTER**********/
 footer {
-    background-color: #29a6dc;
+    background-color: #000000;
     color: white;
     font-family: 'Saira', sans-serif;
     text-align: center;

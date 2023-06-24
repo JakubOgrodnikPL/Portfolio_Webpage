@@ -339,19 +339,19 @@ nav ul li a.active {
 }
 
 .portfolio .item:nth-of-type(1) {
-    background-image: url(../media/portfolio1.jpg);
+    background-image: url(../media/unreal_projects1.jpg);
 }
 
 .portfolio .item:nth-of-type(2) {
-    background-image: url(../media/poetry.jpg);
+    background-image: url(../media/passion1.jpg);
 }
 
 .portfolio .item:nth-of-type(3) {
-    background-image: url(../media/digitalgamestudies.jpg);
+    background-image: url(../media/frontend.jpg);
 }
 
 .portfolio .item:nth-of-type(4) {
-    background-image: url(../media/playinggames.jpg);
+    background-image: url(../media/other.jpg);
 }
 
 .portfolio .item:nth-of-type(5) {
@@ -914,6 +914,27 @@ nav ul li a.active {
     }
 
 }
+
+.gallery{
+    position: relative;
+    display: flexbox;
+    justify-content: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    
+}
+
+.gallery img{
+
+    width: 100%;
+}
+
+
+
+
+
 
 
 
