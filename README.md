@@ -2,11 +2,7 @@
  My webpage
 
  TO DO:
- 1. Movie from FPS C++ project
+ 1. Record with OBS movie from FPS C++ project / Streaming
  2. Screen Shot from ongoing project
  3. Rebuild the Unreal section
  4. Update CV
-
- Current todo installations:
- - Visual Studio Packages
- - OBS
