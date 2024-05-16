@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<!----------HEAD---------->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jakub Ogrodnik - Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.3/plyr.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@300;400;700&family=Saira:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8dfccec39a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/stylesUnreal.css" />
+</head>
+<!----------BODY---------->
+
+<body>
+
+    <!--------------------------- MENU ------------------------------>
+
+    <div class="menuUnreal" id="top">
+        <a href="/index.html">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Back to main page
+        </a>
+    </div>
+
+    <!--------------------------- WELCOME ------------------------------>
+
+    <div class="unrealTitle">
+        <!-- <img class="unrealLogo" src="/media/Unreal_logo.jpg" alt=""> -->       
+        Unreal Engine Minor Projects:
+    </div>
+    <br>
+
+    <!-------------------------PROJECTS DROPDOWN-------------------------->
+    <div class="wrapperUnreal">
+
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head33">
+            <label for="collapsible-head33">HLSL Distortion + Raymarching</label>
+            <div class="collapsible-content">
+                <p>
+                    HLSL miniproject - A muliti-layer material with raymarching. The Colour crtiteria are split into RGB and a distortion effect is added at the end of the process.
+                    <br>
+                    <br>
+                </p>
+                <video class="videoUnreal" id="player" playsinline controls loop data-poster="/path/to/poster.jpg">
+                    <source src="/media/Unreal_34_HLSL_Distortion.mkv" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head32">
+            <label for="collapsible-head32">HLSL Packed Maps and Material Switch</label>
+            <div class="collapsible-content">
+                <p>
+                    A HLSL miniproject - managing custom texture packages, which I prepared in Gimp, with RGB channels by the custom switch nodes.
+                    <br>
+                    <br>
+                </p>
+                <video class="videoUnreal" id="player" playsinline controls loop data-poster="/path/to/poster.jpg">
+                    <source src="/media/Unreal_33_HLSL_Texture_Packaging.mkv" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+        
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head31">
+            <label for="collapsible-head31">HLSL Raymarching Textures</label>
+            <div class="collapsible-content">
+                <p>
+                    A HLSL miniproject - raymarching textures. Making muliti-layer 3D Depth illusion out of a 2D texture.
+                    <br>
+                    <br>
+                </p>
+                <video class="videoUnreal" id="player" playsinline controls loop data-poster="/path/to/poster.jpg">
+                    <source src="/media/Unreal_32_HLSL_Raymarching_textures.mkv" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head28">
+            <label for="collapsible-head28">HLSL Raymarching Shapes</label>
+            <div class="collapsible-content">
+                <p>
+                    In this project I created raymarched sphere and donut shapes. I added light diffusion and specular highlights. 
+                    <br>
+                    <br>
+                </p>
+                <video class="videoUnreal" id="player" playsinline controls loop data-poster="/path/to/poster.jpg">
+                    <source src="/media/Unreal_28-31_HLSL_Sphere_Donut.mkv" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+        <!-- <div class="collapsible">
+            <input type="checkbox" id="collapsible-head30">
+            <label for="collapsible-head30">HLSL Donut</label>
+            <div class="collapsible-content">
+                <p>
+                    Another HLSL miniproject - a donut.
+                    <br>
+                    <br>
+                </p>
+                <video class="videoUnreal" id="player" playsinline controls loop data-poster="/path/to/poster.jpg">
+                    <source src="/media/Unreal_31_HLSL_Donut.mkv" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head29">
+            <label for="collapsible-head29">HLSL Specular Highlights</label>
+            <div class="collapsible-content">
+                <p>
+                    Another HLSL tutorial - added specular highlights to a raymarched sphere.
+                    <br>
+                    <br>
+                </p>
+                <video class="videoUnreal" id="player" playsinline controls loop data-poster="/path/to/poster.jpg">
+                    <source src="/media/Unreal_30_HLSL_Specular_Highlights.mkv" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head28">
+            <label for="collapsible-head28">HLSL Light Diffusion</label>
+            <div class="collapsible-content">
+                <p>
+                    Another HLSL tutorial - added light diffusion to the reaymarched material.
+                    <br>
+                    <br>
+                </p>
+                <video class="videoUnreal" id="player" playsinline controls loop data-poster="/path/to/poster.jpg">
+                    <source src="/media/Unreal_29_HLSL_Light_Diffusion.mkv" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head28">
+            <label for="collapsible-head28">HLSL Raymarching</label>
+            <div class="collapsible-content">
+                <p>
+                    Another HLSL tutorial - raymarching with a sphere.
+                    <br>
+                    <br>
+                </p>
+                <video class="videoUnreal" id="player" playsinline controls loop data-poster="/path/to/poster.jpg">
+                    <source src="/media/Unreal_28_HLSL_Raymarching.mkv" type="video/mp4" />
+                </video>
+            </div>
+        </div> -->
+
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head22">
+            <label for="collapsible-head22">HLSL</label>
+            <div class="collapsible-content">
+                <p>
+                    My first High Level Shading Language miniproject. It includes: a conversion of Blueprint nodes into a custom node,
+                     sine and cosine functions dancing together on the circrle pattern and modifications of the functions with time.
+                    <br>
+                    <br>
+                </p>
+                <video class="videoUnreal" id="player" playsinline controls loop data-poster="/path/to/poster.jpg">
+                    <source src="/media/Unreal_22-27_HLSL_1-5_No_Raymarching.mkv" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+        <!-- <div class="collapsible">
+            <input type="checkbox" id="collapsible-head27">
+            <label for="collapsible-head27">HLSL 5</label>
+            <div class="collapsible-content">
+                <p>
+                    Another HLSL tutorial - modyfing sine and cosine functions with time.
+                    <br>
+                    <br>
+                </p>
+                <video class="videoUnreal" id="player" playsinline controls loop data-poster="/path/to/poster.jpg">
+                    <source src="/media/Unreal_27_HLSL_5.mkv" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head26">
+            <label for="collapsible-head26">HLSL 4</label>
+            <div class="collapsible-content">
+                <p>
+                    Another HLSL tutorial involving sine and cosine functions dancing together on the circrle pattern.
+                    <br>
+                    <br>
+                </p>
+                <video class="videoUnreal" id="player" playsinline controls loop data-poster="/path/to/poster.jpg">
+                    <source src="/media/Unreal_26_HLSL_4.mkv" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head25">
+            <label for="collapsible-head25">HLSL 3</label>
+            <div class="collapsible-content">
+                <p>
+                    Another conversion of Blueprint nodes into a custom node containing HLSL (formula).
+                    <br>
+                    <br>
+                </p>
+                <video class="videoUnreal" id="player" playsinline controls loop data-poster="/path/to/poster.jpg">
+                    <source src="/media/Unreal_25_HLSL_3.mkv" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head24">
+            <label for="collapsible-head24">Blueprints to HLSL 2</label>
+            <div class="collapsible-content">
+                <p>
+                    Another conversion of Blueprint nodes into a custom node containing HLSL (formula).
+                    <br>
+                    <br>
+                </p>
+                <video class="videoUnreal" id="player" playsinline controls loop data-poster="/path/to/poster.jpg">
+                    <source src="/media/Unreal_24_BPtoHLSL_2.mkv" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head22">
+            <label for="collapsible-head22">Blueprints to HLSL</label>
+            <div class="collapsible-content">
+                <p>
+                    A conversion of Blueprint nodes into a custom node containing HLSL (formula).
+                </p>
+                <video class="videoUnreal" id="player" playsinline controls loop data-poster="/path/to/poster.jpg">
+                    <source src="/media/Unreal_22_BPtoHLSL.mkv" type="video/mp4" />
+                </video>
+            </div>
+        </div> -->
+
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head21">
+            <label for="collapsible-head21">Free Look Camera</label>
+            <div class="collapsible-content">
+                <p>
+                    A free look camera implemented with the Enhanced Input Controller.
+                </p>
+                <video class="videoUnreal" id="player" playsinline controls loop data-poster="/path/to/poster.jpg">
+                    <source src="/media/Unreal_21_FreeLook.mkv" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head20">
+            <label for="collapsible-head20">Ragdoll</label>
+            <div class="collapsible-content">
+                <p>
+                    A simple physics implemented to the character mesh to simulate a ragdoll behaviour.
+                </p>
+                <video class="videoUnreal" id="player" playsinline controls loop data-poster="/path/to/poster.jpg">
+                    <source src="/media/Unreal_20_Ragdoll.mkv" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head19">
+            <label for="collapsible-head19">Procedural Content Creation</label>
+            <div class="collapsible-content">
+                <p>
+                    A forest made with the Procedural Content Creation Framework. It uses a surface sequencers and static mesh spawners.
+                </p>
+                <video class="videoUnreal" id="player" playsinline controls loop data-poster="/path/to/poster.jpg">
+                    <source src="/media/Unreal_19_ProConGenFramework.mkv" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head18">
+            <label for="collapsible-head18">Water</label>
+            <div class="collapsible-content">
+                <p>
+                    A piece of ocean made with the Landmass plugin. I used some tweaks of wavelenghts, amplitudes, etc. I also places some cubes to show the buoyancy effect.
+                </p>
+                <video class="videoUnreal" id="player" playsinline controls loop data-poster="/path/to/poster.jpg">
+                    <source src="/media/Unreal_18_Water.mkv" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head17">
+            <label for="collapsible-head17">Camera Spline</label>
+            <div class="collapsible-content">
+                <p>
+                    A Spline-based camera movement (side-scroller) made with the Blueprints.
+                </p>
+                <video class="videoUnreal" id="player" playsinline controls loop data-poster="/path/to/poster.jpg">
+                    <source src="/media/Unreal_17_CameraSpline.mkv" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head16">
+            <label for="collapsible-head16">Bodycam</label>
+            <div class="collapsible-content">
+                <p>
+                    A tutorial how to make a Bodycam and use vignettes.
+                </p>
+                <video class="videoUnreal" id="player" playsinline controls loop data-poster="/path/to/poster.jpg">
+                    <source src="/media/Unreal_16_Bodycam.mkv" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head15">
+            <label for="collapsible-head15">Mirror</label>
+            <div class="collapsible-content">
+                <p>
+                    A tutorial how to make a Mirror. 
+                </p>
+                <video class="videoUnreal" id="player" playsinline controls loop data-poster="/path/to/poster.jpg">
+                    <source src="/media/Unreal_15_Mirror.mov" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head14">
+            <label for="collapsible-head14">Foliage Wind Effect</label>
+            <div class="collapsible-content">
+                <p>
+                    A tutorial how to make a wind effet using the Quixel Bridge and the Foliage Tool.  
+                </p>
+                <video class="videoUnreal" id="player" playsinline controls loop data-poster="/path/to/poster.jpg">
+                    <source src="/media/Unreal_14_FoliageWind.mkv" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head11">
+            <label for="collapsible-head11">Health Bar</label>
+            <div class="collapsible-content">
+                <p>
+                    This project is about health bar and combining it with fall damage.
+                </p>
+                <video class="videoUnreal" id="player" playsinline controls loop data-poster="/path/to/poster.jpg">
+                    <source src="/media/Unreal_11_HealthBar.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head10">
+            <label for="collapsible-head10">Fall damage</label>
+            <div class="collapsible-content">
+                <p>
+                    In this project I set some height dependent tresholds. Character's health is decreasng by certain amout after falling.
+                </p>
+                <video class="videoUnreal" id="player" playsinline controls autoplay loop data-poster="/path/to/poster.jpg">
+                    <source src="/media/Unreal_10_FallDamage.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head9">
+            <label for="collapsible-head9">Health decrease</label>
+            <div class="collapsible-content">
+                <p>
+                    In this project I set counters for diminishing amout of oxygene in the atmosphere. After O2 level is zero, character's health starts to decrease for a certain amount.
+                </p>
+                <video class="videoUnreal" id="player" playsinline controls autoplay loop data-poster="/path/to/poster.jpg">
+                    <source src="/media/Unreal_9_HealthDecrease.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head8">
+            <label for="collapsible-head8">Footprints</label>
+            <div class="collapsible-content">
+                <p>
+                    In this project the character leaves footprints depending on the direction of movement. The prints vanish after a certain delay. 
+                </p>
+                <video class="videoUnreal" id="player" playsinline controls autoplay loop data-poster="/path/to/poster.jpg">
+                    <source src="/media/Unreal_8_Footprints.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head7">
+            <label for="collapsible-head7">Chaos engine: fracture</label>
+            <div class="collapsible-content">
+                <p>
+                    This project is about testing chaos engine, different types of fracturing, polishing textures of cross section fileds of broken actors. Additionally I tested multi level fracturing to make objects breakable into smaller and smaller pieces.
+                </p>
+                <video class="videoUnreal" id="player" playsinline controls autoplay loop data-poster="/path/to/poster.jpg">
+                    <source src="/media/Unreal_7_ChaosEngine_Fracture.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head6">
+            <label for="collapsible-head6">Cutscene</label>
+            <div class="collapsible-content">
+                <p>
+                    In this project I made cutscene based on Automotive Bridge Scene.
+                </p>
+                <video class="videoUnreal" id="player" playsinline controls autoplay loop data-poster="/path/to/poster.jpg">
+                    <source src="/media/Unreal_6_Cutscene_1.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head5">
+            <label for="collapsible-head5">Blender textile to Unreal</label>
+            <div class="collapsible-content">
+                <p>
+                    In this project I made a simple cloak in Blender. Then I imported it into Unreal and added physics for more natural behaviour.
+                </p>
+                <video class="videoUnreal" id="player" playsinline controls autoplay loop data-poster="/path/to/poster.jpg">
+                    <source src="/media/Unreal_5_UE_BLender_Textile.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head2">
+            <label for="collapsible-head2">Directional projectile spawning</label>
+            <div class="collapsible-content">
+                <p>
+                    The main goal of this project is to spawn projectiles in the direction player is looking at. The method involves corelation of specific vectors. Project includes some logic function that are nested to make a nice and tidy blueprint chart.
+                </p>
+                <video class="videoUnreal" id="player" playsinline controls autoplay loop data-poster="/path/to/poster.jpg">
+                    <source src="/media/Unreal_1.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head">
+            <label for="collapsible-head">Automated test</label>
+            <div class="collapsible-content">
+                <p>
+                    The main goal of this project is to spawn projectiles in the direction player is looking at. The method involves corelation of specific vectors. Project includes some logic function that are nested to make a nice and tidy blueprint chart.
+                </p>
+                <video class="videoUnreal" id="player" playsinline controls autoplay loop data-poster="/path/to/poster.jpg">
+                    <source src="/media/Unreal_2.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+<!------------------BUTTON GO TO TOP---------------------->
+
+<!-- <button class="goToTop" > <a href="#top">Go<br>to<br>top</a> </button> -->
+<div class="menuUnreal goToTop">
+<a href="#top">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    Go to top
+</a>
+<div/>
+
+    <script src="https://cdn.plyr.io/3.7.3/plyr.polyfilled.js"></script>
+    <script src="/js/scriptUnreal.js"></script>
+</body>
+
+</html>

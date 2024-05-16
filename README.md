@@ -1,15 +1,13 @@
 # Portfolio_Webpage
  My webpage
 
- TO DO:
+TO DO:
 Rebuild the Unreal section
 Update CV
 Make subpage with Unreal Log
 
 
  DONE:
-
-
  1. Record with OBS movie from FPS C++ project / Streaming DONE
  1.5 Make a scene :) DONE
  1.6 Write script
